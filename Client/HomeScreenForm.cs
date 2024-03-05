@@ -26,7 +26,6 @@ namespace Client
         {
             CourierRequestForm courierRequestForm = new CourierRequestForm();
             courierRequestForm.ShowDialog();
-            //Close();
         }
 
         private void viewProfileButton_Click(object sender, EventArgs e)
