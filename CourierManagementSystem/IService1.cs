@@ -17,9 +17,6 @@ namespace CourierManagementSystem
         [OperationContract]
         CompositeType GetDataUsingDataContract(CompositeType composite);
 
-        [OperationContract]
-        string register(string user_name, string email, string password, string mobile_no);
-
         // TODO: Add your service operations here
     }
 
