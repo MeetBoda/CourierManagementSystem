@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ReferenceGroup xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" ID="50b33e84-5d64-470d-93f2-a2fa2a4d3234" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+<ReferenceGroup xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" ID="ffb08880-79f9-4bc9-bfaf-be88ef8a3464" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
   <ClientOptions>
     <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
     <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
@@ -22,9 +22,9 @@
     <MetadataSource Address="http://localhost:8733/Design_Time_Addresses/CourierManagementSystem/CourierService/mex" Protocol="mex" SourceId="1" />
   </MetadataSources>
   <Metadata>
-    <MetadataFile FileName="service.wsdl" MetadataType="Wsdl" ID="5307e0fc-c79d-4cd6-9f52-e41d6ba16e1e" SourceId="1" SourceUrl="http://localhost:8733/Design_Time_Addresses/CourierManagementSystem/CourierService/mex" />
-    <MetadataFile FileName="service.xsd" MetadataType="Schema" ID="f71ec36c-3277-49f8-93f8-166fe57a5e37" SourceId="1" SourceUrl="http://localhost:8733/Design_Time_Addresses/CourierManagementSystem/CourierService/mex" />
-    <MetadataFile FileName="service1.xsd" MetadataType="Schema" ID="31f06bbb-311c-40e1-a9d1-85f961240057" SourceId="1" SourceUrl="http://localhost:8733/Design_Time_Addresses/CourierManagementSystem/CourierService/mex" />
+    <MetadataFile FileName="service.wsdl" MetadataType="Wsdl" ID="efa38f93-159e-4fcb-b6b9-2a8b28043b82" SourceId="1" SourceUrl="http://localhost:8733/Design_Time_Addresses/CourierManagementSystem/CourierService/mex" />
+    <MetadataFile FileName="service.xsd" MetadataType="Schema" ID="b70da7c8-3394-4dc2-adf8-cda35ad90857" SourceId="1" SourceUrl="http://localhost:8733/Design_Time_Addresses/CourierManagementSystem/CourierService/mex" />
+    <MetadataFile FileName="service1.xsd" MetadataType="Schema" ID="b0ca798a-4c4c-4ef1-aa1b-62092015c576" SourceId="1" SourceUrl="http://localhost:8733/Design_Time_Addresses/CourierManagementSystem/CourierService/mex" />
   </Metadata>
   <Extensions>
     <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />

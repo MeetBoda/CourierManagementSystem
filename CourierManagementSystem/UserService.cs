@@ -25,6 +25,7 @@ namespace CourierManagementSystem
 
                         if (!reader.HasRows)
                         {
+                            reader.Close();
                             query = "INSERT INTO [User] (user_name, email, password, mobile_no) VALUES(@user_name, @email, @password, @mobile_no)";
                             using (SqlCommand cmd1 = new SqlCommand(query))
                             {
@@ -33,7 +34,6 @@ namespace CourierManagementSystem
                                 cmd1.Parameters.AddWithValue("@password", password);
                                 cmd1.Parameters.AddWithValue("@mobile_no", mobile_no);
                                 cmd1.Connection = con;
-                                con.Open();
                                 cmd1.ExecuteNonQuery();
                                 con.Close();
                             }
