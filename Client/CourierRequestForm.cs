@@ -27,7 +27,7 @@ namespace Client
             if (ValidateInput())
             {
                 // Process the form submission, e.g., send data to a database or API
-                int sender_id = Convert.ToInt32(textBoxSenderID.Text);
+                int sender_id = LoginInfo.UserID;
                 string sender_address = textBoxSenderAddress.Text;
                 string src_city = textBoxSourceCity.Text;
                 string receiver_name = textBoxReceiverName.Text;
@@ -49,8 +49,7 @@ namespace Client
 
         private bool ValidateInput()
         {
-            if (string.IsNullOrEmpty(textBoxSenderID.Text) ||
-                string.IsNullOrEmpty(textBoxSenderAddress.Text) ||
+            if (string.IsNullOrEmpty(textBoxSenderAddress.Text) ||
                 string.IsNullOrEmpty(textBoxSourceCity.Text) ||
                 string.IsNullOrEmpty(textBoxReceiverName.Text) ||
                 string.IsNullOrEmpty(textBoxReceiverAddress.Text) ||
@@ -67,7 +66,6 @@ namespace Client
 
         private void ClearForm()
         {
-            textBoxSenderID.Text = "";
             textBoxSenderAddress.Text = "";
             textBoxSourceCity.Text = "";
             textBoxReceiverName.Text = "";
