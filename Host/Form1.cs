@@ -24,19 +24,21 @@ namespace Host
 
         private void Form1_Load(object sender, EventArgs e)
         {
-            Uri tcpa = new Uri("net.tcp://localhost:8010/Design_Time_Addresses/CourierManagementSystem/UserService/mex");
-            Uri http = new Uri("http://localhost:8733/Design_Time_Addresses/CourierManagementSystem/");
+            Uri tcpa = new Uri("net.tcp://localhost:8010/Design_Time_Addresses/CourierManagementSystem/");
             sh = new ServiceHost(typeof(Service1), tcpa);
-
-            NetTcpBinding tcpb = new NetTcpBinding();
-
-            ServiceMetadataBehavior mBehave = new ServiceMetadataBehavior();
-            sh.Description.Behaviors.Add(mBehave);
-            sh.AddServiceEndpoint(typeof(IMetadataExchange), MetadataExchangeBindings.CreateMexTcpBinding(), "mex");
-            sh.AddServiceEndpoint(typeof(IService1), tcpb, tcpa);
-
             sh.Open();
             label1.Text = "Service Running ...";
+
+
+            //Uri http = new Uri("http://localhost:8733/Design_Time_Addresses/CourierManagementSystem/");
+            //NetTcpBinding tcpb = new NetTcpBinding();
+
+            /*ServiceMetadataBehavior mBehave = new ServiceMetadataBehavior();
+            sh.Description.Behaviors.Add(mBehave);
+            sh.AddServiceEndpoint(typeof(IMetadataExchange), MetadataExchangeBindings.CreateMexTcpBinding(), "mex");
+            sh.AddServiceEndpoint(typeof(IService1), tcpb, tcpa);*/
+
+
         }
     }
 }

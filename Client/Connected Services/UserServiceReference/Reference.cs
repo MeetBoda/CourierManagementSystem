@@ -9,7 +9,70 @@
 //------------------------------------------------------------------------------
 
 namespace Client.UserServiceReference {
+    using System.Runtime.Serialization;
+    using System;
     
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
+    [System.Runtime.Serialization.DataContractAttribute(Name="UserInfo", Namespace="http://schemas.datacontract.org/2004/07/CourierManagementSystem")]
+    [System.SerializableAttribute()]
+    public partial class UserInfo : object, System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged {
+        
+        [System.NonSerializedAttribute()]
+        private System.Runtime.Serialization.ExtensionDataObject extensionDataField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string UserIDField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string messageField;
+        
+        [global::System.ComponentModel.BrowsableAttribute(false)]
+        public System.Runtime.Serialization.ExtensionDataObject ExtensionData {
+            get {
+                return this.extensionDataField;
+            }
+            set {
+                this.extensionDataField = value;
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string UserID {
+            get {
+                return this.UserIDField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.UserIDField, value) != true)) {
+                    this.UserIDField = value;
+                    this.RaisePropertyChanged("UserID");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string message {
+            get {
+                return this.messageField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.messageField, value) != true)) {
+                    this.messageField = value;
+                    this.RaisePropertyChanged("message");
+                }
+            }
+        }
+        
+        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
+        
+        protected void RaisePropertyChanged(string propertyName) {
+            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
+            if ((propertyChanged != null)) {
+                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
+            }
+        }
+    }
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ServiceModel.ServiceContractAttribute(ConfigurationName="UserServiceReference.IUserService")]
@@ -22,10 +85,10 @@ namespace Client.UserServiceReference {
         System.Threading.Tasks.Task<string> registerAsync(string user_name, string email, string password, string mobile_no);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IUserService/login", ReplyAction="http://tempuri.org/IUserService/loginResponse")]
-        string login(string email, string password);
+        Client.UserServiceReference.UserInfo login(string email, string password);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IUserService/login", ReplyAction="http://tempuri.org/IUserService/loginResponse")]
-        System.Threading.Tasks.Task<string> loginAsync(string email, string password);
+        System.Threading.Tasks.Task<Client.UserServiceReference.UserInfo> loginAsync(string email, string password);
     }
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
@@ -63,11 +126,11 @@ namespace Client.UserServiceReference {
             return base.Channel.registerAsync(user_name, email, password, mobile_no);
         }
         
-        public string login(string email, string password) {
+        public Client.UserServiceReference.UserInfo login(string email, string password) {
             return base.Channel.login(email, password);
         }
         
-        public System.Threading.Tasks.Task<string> loginAsync(string email, string password) {
+        public System.Threading.Tasks.Task<Client.UserServiceReference.UserInfo> loginAsync(string email, string password) {
             return base.Channel.loginAsync(email, password);
         }
     }

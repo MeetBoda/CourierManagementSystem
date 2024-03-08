@@ -30,16 +30,8 @@ namespace Client
 
         private void viewProfileButton_Click(object sender, EventArgs e)
         {
-            ProfileForm profileForm = new ProfileForm(2);
+            ProfileForm profileForm = new ProfileForm(LoginInfo.UserID);
             profileForm.ShowDialog();
-        }
-
-        private void loginRegisterButton_Click(object sender, EventArgs e)
-        {
-            //Hide();
-            RegisterForm registerForm = new RegisterForm();
-            registerForm.ShowDialog();
-            
         }
 
         private void cancelRequestButton_Click(object sender, EventArgs e)

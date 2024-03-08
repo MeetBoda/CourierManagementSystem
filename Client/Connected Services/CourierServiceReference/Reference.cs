@@ -22,10 +22,10 @@ namespace Client.CourierServiceReference {
         System.Threading.Tasks.Task<int> placerequestAsync(int sender_id, string sender_address, string src_city, string receiver_name, string receiver_address, string receiver_mobile, string dest_city);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ICourierService/cancelrequest", ReplyAction="http://tempuri.org/ICourierService/cancelrequestResponse")]
-        string cancelrequest(int courier_id);
+        string cancelrequest(int courier_id, int user_id);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ICourierService/cancelrequest", ReplyAction="http://tempuri.org/ICourierService/cancelrequestResponse")]
-        System.Threading.Tasks.Task<string> cancelrequestAsync(int courier_id);
+        System.Threading.Tasks.Task<string> cancelrequestAsync(int courier_id, int user_id);
     }
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
@@ -63,12 +63,12 @@ namespace Client.CourierServiceReference {
             return base.Channel.placerequestAsync(sender_id, sender_address, src_city, receiver_name, receiver_address, receiver_mobile, dest_city);
         }
         
-        public string cancelrequest(int courier_id) {
-            return base.Channel.cancelrequest(courier_id);
+        public string cancelrequest(int courier_id, int user_id) {
+            return base.Channel.cancelrequest(courier_id, user_id);
         }
         
-        public System.Threading.Tasks.Task<string> cancelrequestAsync(int courier_id) {
-            return base.Channel.cancelrequestAsync(courier_id);
+        public System.Threading.Tasks.Task<string> cancelrequestAsync(int courier_id, int user_id) {
+            return base.Channel.cancelrequestAsync(courier_id, user_id);
         }
     }
 }

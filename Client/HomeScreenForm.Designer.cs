@@ -30,7 +30,6 @@
         {
             this.placeRequestButton = new System.Windows.Forms.Button();
             this.viewProfileButton = new System.Windows.Forms.Button();
-            this.loginRegisterButton = new System.Windows.Forms.Button();
             this.cancelRequestButton = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
@@ -45,7 +44,7 @@
             // 
             // cancelRequestButton
             // 
-            this.cancelRequestButton.Location = new System.Drawing.Point(330, 12);
+            this.cancelRequestButton.Location = new System.Drawing.Point(224, 12);
             this.cancelRequestButton.Name = "cancelRequestButton";
             this.cancelRequestButton.Size = new System.Drawing.Size(100, 30);
             this.cancelRequestButton.Text = "Cancel Request";
@@ -61,33 +60,29 @@
             this.viewProfileButton.UseVisualStyleBackColor = true;
             this.viewProfileButton.Click += new System.EventHandler(this.viewProfileButton_Click);
             // 
-            // loginRegisterButton
-            // 
-            this.loginRegisterButton.Location = new System.Drawing.Point(224, 12);
-            this.loginRegisterButton.Name = "loginRegisterButton";
-            this.loginRegisterButton.Size = new System.Drawing.Size(100, 30);
-            this.loginRegisterButton.Text = "Login/Register";
-            this.loginRegisterButton.UseVisualStyleBackColor = true;
-            this.loginRegisterButton.Click += new System.EventHandler(this.loginRegisterButton_Click);
-            // 
             // HomeScreenForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackgroundImage = Properties.Resources.Courier; // Set the background image here
+            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.loginRegisterButton);
             this.Controls.Add(this.viewProfileButton);
             this.Controls.Add(this.placeRequestButton);
             this.Controls.Add(this.cancelRequestButton);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None; // Remove the border
+            this.MaximizeBox = false; // Disable maximize button
+            this.MinimizeBox = false; // Disable minimize button
             this.Name = "HomeScreenForm";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen; // Start form in the center of the screen
             this.Text = "Home Screen";
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized; // Maximize the form
             this.ResumeLayout(false);
 
         }
 
         private System.Windows.Forms.Button placeRequestButton;
         private System.Windows.Forms.Button viewProfileButton;
-        private System.Windows.Forms.Button loginRegisterButton;
         private System.Windows.Forms.Button cancelRequestButton;
 
         #endregion

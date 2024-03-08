@@ -52,11 +52,12 @@ namespace CourierManagementSystem
             return "User Registered Successfully";
         }
 
-        public string login(string email, string password)
+        public UserInfo login(string email, string password)
         {
             SqlConnection con = new SqlConnection();
             con.ConnectionString = ConfigurationManager.ConnectionStrings["dbconnection"].ConnectionString;
             string query = "SELECT user_id, password FROM [User] WHERE email= (@email)";
+            UserInfo user = new UserInfo();
             try
             {
                 using (con)
@@ -75,21 +76,28 @@ namespace CourierManagementSystem
                                 int uid = reader.GetInt32(0);
                                 string pass = reader.GetString(1);
 
-                                if (pass == password)
+                                if (pass == password && email == "admin@gmail.com")
                                 {
+                                    user.message = "Admin Login";
+                                    user.UserID = uid.ToString();
                                    // Session["uid"] = uid;
                                     //Response.Redirect("Home_Teacher.aspx");
                                 }
+                                else if(pass == password)
+                                {
+                                    user.message = "Login Successful";
+                                    user.UserID = uid.ToString();
+                                }
                                 else
                                 {
-                                    return "Incorrect Password";
+                                    user.message = "Incorrect Password";
                                     //ClientScript.RegisterStartupScript(this.GetType(), "alert", "alert('Password is incorrect.');", true);
                                 }
                             }
                         }
                         else
                         {
-                            return "Invalid User";
+                            user.message = "Invalid User";
                             //ClientScript.RegisterStartupScript(this.GetType(), "alert", "alert('Teacher ID is not Registered. Please SignUp First');", true);
                             //Response.Redirect("Signup_Teacher.aspx");
                         }
@@ -101,7 +109,7 @@ namespace CourierManagementSystem
             {
                 Console.WriteLine(ex.ToString());
             }
-            return "Login Successful";
+            return user;
         }
     }
 }

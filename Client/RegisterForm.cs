@@ -43,7 +43,7 @@ namespace Client
             Hide();
             LoginForm loginForm = new LoginForm();
             loginForm.ShowDialog();
-            Close();
+            //Close();
         }
     }
 }

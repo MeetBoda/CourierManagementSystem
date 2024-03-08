@@ -1,5 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <xs:schema xmlns:tns="http://tempuri.org/" elementFormDefault="qualified" targetNamespace="http://tempuri.org/" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import namespace="http://schemas.datacontract.org/2004/07/CourierManagementSystem" />
   <xs:element name="register">
     <xs:complexType>
       <xs:sequence>
@@ -28,7 +29,7 @@
   <xs:element name="loginResponse">
     <xs:complexType>
       <xs:sequence>
-        <xs:element minOccurs="0" name="loginResult" nillable="true" type="xs:string" />
+        <xs:element xmlns:q1="http://schemas.datacontract.org/2004/07/CourierManagementSystem" minOccurs="0" name="loginResult" nillable="true" type="q1:UserInfo" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>
