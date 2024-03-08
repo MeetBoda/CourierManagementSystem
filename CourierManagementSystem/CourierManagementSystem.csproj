@@ -45,7 +45,9 @@
     <Reference Include="System.Xml.Linq" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AdminService.cs" />
     <Compile Include="CourierClass.cs" />
+    <Compile Include="IAdminService.cs" />
     <Compile Include="ICourierService.cs" />
     <Compile Include="IProfileService.cs" />
     <Compile Include="IService1.cs" />

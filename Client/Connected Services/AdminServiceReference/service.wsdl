@@ -1,0 +1,97 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:tns="http://tempuri.org/" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" name="AdminService" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://tempuri.org/Imports">
+      <xsd:import namespace="http://tempuri.org/" />
+      <xsd:import namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+      <xsd:import namespace="http://schemas.datacontract.org/2004/07/CourierManagementSystem" />
+      <xsd:import namespace="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="IAdminService_getData_InputMessage">
+    <wsdl:part name="parameters" element="tns:getData" />
+  </wsdl:message>
+  <wsdl:message name="IAdminService_getData_OutputMessage">
+    <wsdl:part name="parameters" element="tns:getDataResponse" />
+  </wsdl:message>
+  <wsdl:message name="IAdminService_assigndeliveryperson_InputMessage">
+    <wsdl:part name="parameters" element="tns:assigndeliveryperson" />
+  </wsdl:message>
+  <wsdl:message name="IAdminService_assigndeliveryperson_OutputMessage">
+    <wsdl:part name="parameters" element="tns:assigndeliverypersonResponse" />
+  </wsdl:message>
+  <wsdl:message name="IAdminService_changestatus_InputMessage">
+    <wsdl:part name="parameters" element="tns:changestatus" />
+  </wsdl:message>
+  <wsdl:message name="IAdminService_changestatus_OutputMessage">
+    <wsdl:part name="parameters" element="tns:changestatusResponse" />
+  </wsdl:message>
+  <wsdl:message name="IAdminService_getEmployeeList_InputMessage">
+    <wsdl:part name="parameters" element="tns:getEmployeeList" />
+  </wsdl:message>
+  <wsdl:message name="IAdminService_getEmployeeList_OutputMessage">
+    <wsdl:part name="parameters" element="tns:getEmployeeListResponse" />
+  </wsdl:message>
+  <wsdl:portType name="IAdminService">
+    <wsdl:operation name="getData">
+      <wsdl:input wsaw:Action="http://tempuri.org/IAdminService/getData" message="tns:IAdminService_getData_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IAdminService/getDataResponse" message="tns:IAdminService_getData_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="assigndeliveryperson">
+      <wsdl:input wsaw:Action="http://tempuri.org/IAdminService/assigndeliveryperson" message="tns:IAdminService_assigndeliveryperson_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IAdminService/assigndeliverypersonResponse" message="tns:IAdminService_assigndeliveryperson_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="changestatus">
+      <wsdl:input wsaw:Action="http://tempuri.org/IAdminService/changestatus" message="tns:IAdminService_changestatus_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IAdminService/changestatusResponse" message="tns:IAdminService_changestatus_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="getEmployeeList">
+      <wsdl:input wsaw:Action="http://tempuri.org/IAdminService/getEmployeeList" message="tns:IAdminService_getEmployeeList_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IAdminService/getEmployeeListResponse" message="tns:IAdminService_getEmployeeList_OutputMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="BasicHttpBinding_IAdminService" type="tns:IAdminService">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="getData">
+      <soap:operation soapAction="http://tempuri.org/IAdminService/getData" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="assigndeliveryperson">
+      <soap:operation soapAction="http://tempuri.org/IAdminService/assigndeliveryperson" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="changestatus">
+      <soap:operation soapAction="http://tempuri.org/IAdminService/changestatus" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getEmployeeList">
+      <soap:operation soapAction="http://tempuri.org/IAdminService/getEmployeeList" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="AdminService">
+    <wsdl:port name="BasicHttpBinding_IAdminService" binding="tns:BasicHttpBinding_IAdminService">
+      <soap:address location="http://localhost:8733/Design_Time_Addresses/CourierManagementSystem/AdminService/" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

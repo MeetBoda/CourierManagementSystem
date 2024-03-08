@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" ID="47d565d9-50ec-423f-9371-8084ca9b5335" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://localhost:8733/Design_Time_Addresses/CourierManagementSystem/AdminService/mex" Protocol="mex" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="service.wsdl" MetadataType="Wsdl" ID="7e63f1fe-342e-472d-8bc8-cb37e44c924b" SourceId="1" SourceUrl="http://localhost:8733/Design_Time_Addresses/CourierManagementSystem/AdminService/mex" />
+    <MetadataFile FileName="service.xsd" MetadataType="Schema" ID="fbb7e6a9-abad-446c-a006-4d184346fead" SourceId="1" SourceUrl="http://localhost:8733/Design_Time_Addresses/CourierManagementSystem/AdminService/mex" />
+    <MetadataFile FileName="service1.xsd" MetadataType="Schema" ID="9b0ef61a-fb6d-48aa-afce-5c0866fa3356" SourceId="1" SourceUrl="http://localhost:8733/Design_Time_Addresses/CourierManagementSystem/AdminService/mex" />
+    <MetadataFile FileName="CourierManagementSystem.xsd" MetadataType="Schema" ID="abbbb111-b664-4c7e-a80d-2317680d6f4f" SourceId="1" SourceUrl="http://localhost:8733/Design_Time_Addresses/CourierManagementSystem/AdminService/mex" />
+    <MetadataFile FileName="Arrays.xsd" MetadataType="Schema" ID="03cb1701-0a3d-448e-8212-4da2d9198e64" SourceId="1" SourceUrl="http://localhost:8733/Design_Time_Addresses/CourierManagementSystem/AdminService/mex" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

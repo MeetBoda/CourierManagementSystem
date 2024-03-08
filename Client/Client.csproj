@@ -54,11 +54,28 @@
     <Compile Include="AdminHomeScreenForm.Designer.cs">
       <DependentUpon>AdminHomeScreenForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="AssignDeliveryPersonForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AssignDeliveryPersonForm.Designer.cs">
+      <DependentUpon>AssignDeliveryPersonForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="CancelCourierRequestForm.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="CancelCourierRequestForm.Designer.cs">
       <DependentUpon>CancelCourierRequestForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ChangeStatusForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ChangeStatusForm.Designer.cs">
+      <DependentUpon>ChangeStatusForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Connected Services\AdminServiceReference\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
     </Compile>
     <Compile Include="Connected Services\CourierServiceReference\Reference.cs">
       <AutoGen>True</AutoGen>
@@ -105,8 +122,17 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="AdminHomeScreenForm.resx">
+      <DependentUpon>AdminHomeScreenForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AssignDeliveryPersonForm.resx">
+      <DependentUpon>AssignDeliveryPersonForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="CancelCourierRequestForm.resx">
       <DependentUpon>CancelCourierRequestForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ChangeStatusForm.resx">
+      <DependentUpon>ChangeStatusForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="CourierRequestForm.resx">
       <DependentUpon>CourierRequestForm.cs</DependentUpon>
@@ -133,6 +159,22 @@
     <EmbeddedResource Include="RegisterForm.resx">
       <DependentUpon>RegisterForm.cs</DependentUpon>
     </EmbeddedResource>
+    <None Include="Connected Services\AdminServiceReference\Arrays.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\AdminServiceReference\Client.AdminServiceReference.AdminData.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\AdminServiceReference\CourierManagementSystem.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\AdminServiceReference\service.wsdl" />
+    <None Include="Connected Services\AdminServiceReference\service.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\AdminServiceReference\service1.xsd">
+      <SubType>Designer</SubType>
+    </None>
     <None Include="Connected Services\CourierServiceReference\service.wsdl" />
     <None Include="Connected Services\CourierServiceReference\service.xsd">
       <SubType>Designer</SubType>
@@ -183,6 +225,7 @@
     <WCFMetadata Include="Connected Services\" />
   </ItemGroup>
   <ItemGroup>
+    <WCFMetadataStorage Include="Connected Services\AdminServiceReference\" />
     <WCFMetadataStorage Include="Connected Services\CourierServiceReference\" />
     <WCFMetadataStorage Include="Connected Services\ProfileServiceReference\" />
     <WCFMetadataStorage Include="Connected Services\UserServiceReference\" />
@@ -222,6 +265,18 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Connected Services\CourierServiceReference\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Connected Services\AdminServiceReference\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Connected Services\AdminServiceReference\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Connected Services\AdminServiceReference\Reference.svcmap">
       <Generator>WCF Proxy Generator</Generator>
       <LastGenOutput>Reference.cs</LastGenOutput>
     </None>
