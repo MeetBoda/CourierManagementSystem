@@ -24,6 +24,7 @@
     <xs:complexType>
       <xs:sequence>
         <xs:element minOccurs="0" name="courier_id" type="xs:int" />
+        <xs:element minOccurs="0" name="user_id" type="xs:int" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>

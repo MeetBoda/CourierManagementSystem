@@ -47,13 +47,13 @@ namespace CourierManagementSystem
             return courier_id;
         }
 
-        public string cancelrequest(int courier_id)
+        public string cancelrequest(int courier_id, int user_id)
         {
             SqlConnection con = new SqlConnection();
             con.ConnectionString = ConfigurationManager.ConnectionStrings["dbconnection"].ConnectionString;
 
-            string query = "DELETE FROM [Courier] WHERE courier_id = (@courier_id)";
-
+            string query = "SELECT * FROM [Courier] WHERE courier_id = (@courier_id) AND sender_id = (@sender_id)";
+            //query = "DELETE FROM [Courier] WHERE courier_id = (@courier_id)";
             try
             {
                 using (con)
@@ -61,9 +61,25 @@ namespace CourierManagementSystem
                     using (SqlCommand cmd = new SqlCommand(query))
                     {
                         cmd.Parameters.AddWithValue("@courier_id", courier_id);
+                        cmd.Parameters.AddWithValue("@sender_id", user_id);
                         cmd.Connection = con;
                         con.Open();
-                        cmd.ExecuteNonQuery();
+                        SqlDataReader reader = cmd.ExecuteReader();
+                        if (reader.HasRows)
+                        {
+                            reader.Close();
+                            query = "DELETE FROM [Courier] WHERE courier_id = (@courier_id)";
+                            using (SqlCommand cmd1 = new SqlCommand(query))
+                            {
+                                cmd1.Parameters.AddWithValue("@courier_id", courier_id);
+                                cmd1.Connection = con;
+                                cmd1.ExecuteNonQuery();
+                            }
+                        }
+                        else
+                        {
+                            return "Please Enter the Valid Courier ID";
+                        }
                         con.Close();
                     }
                 }

@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Client.UserServiceReference;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -11,6 +12,12 @@ using System.Windows.Forms;
 
 namespace Client
 {
+
+    public static class LoginInfo
+    {
+        public static int UserID;
+    }
+
     public partial class LoginForm : Form
     {
         public LoginForm()
@@ -29,9 +36,26 @@ namespace Client
             string email = emailTextBox.Text;
             string password = passwordTextBox.Text;
 
-            string msg = Convert.ToString(_userService.login(email, password));
-            
-            MessageBox.Show(msg);
+            UserInfo userinfo = _userService.login(email, password);
+            if(userinfo.message == "Admin Login")
+            {
+                LoginInfo.UserID = Convert.ToInt32(userinfo.UserID);
+                AdminHomeScreenForm adminHomeScreenForm = new AdminHomeScreenForm();
+                adminHomeScreenForm.ShowDialog();
+                Close();
+            }
+            else if(userinfo.message == "Login Successful")
+            {
+                LoginInfo.UserID = Convert.ToInt32(userinfo.UserID);
+                MessageBox.Show(userinfo.message);
+                HomeScreenForm homeScreenForm = new HomeScreenForm();
+                homeScreenForm.ShowDialog();
+                Close();
+            }
+            else
+            {
+                MessageBox.Show(userinfo.message);
+            }
         }
 
         private void registerLinkLabel_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)

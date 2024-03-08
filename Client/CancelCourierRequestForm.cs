@@ -27,7 +27,7 @@ namespace Client
             CourierServiceReference.CourierServiceClient serviceClient = new CourierServiceReference.CourierServiceClient();
             int courierNumber = Convert.ToInt32(courierNumberTextBox.Text);
             // Use the courierNumber value for further processing
-            string message = serviceClient.cancelrequest(courierNumber);
+            string message = serviceClient.cancelrequest(courierNumber, LoginInfo.UserID);
             MessageBox.Show(message);
             this.Close();
         }

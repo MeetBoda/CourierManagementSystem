@@ -83,7 +83,7 @@
             // userNameTextBox
             // 
             this.userNameTextBox.Location = new System.Drawing.Point(133, 33);
-            this.userNameTextBox.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.userNameTextBox.Margin = new System.Windows.Forms.Padding(4);
             this.userNameTextBox.Name = "userNameTextBox";
             this.userNameTextBox.Size = new System.Drawing.Size(199, 22);
             this.userNameTextBox.TabIndex = 4;
@@ -91,7 +91,7 @@
             // emailTextBox
             // 
             this.emailTextBox.Location = new System.Drawing.Point(133, 70);
-            this.emailTextBox.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.emailTextBox.Margin = new System.Windows.Forms.Padding(4);
             this.emailTextBox.Name = "emailTextBox";
             this.emailTextBox.Size = new System.Drawing.Size(199, 22);
             this.emailTextBox.TabIndex = 5;
@@ -99,7 +99,7 @@
             // passwordTextBox
             // 
             this.passwordTextBox.Location = new System.Drawing.Point(133, 107);
-            this.passwordTextBox.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.passwordTextBox.Margin = new System.Windows.Forms.Padding(4);
             this.passwordTextBox.Name = "passwordTextBox";
             this.passwordTextBox.PasswordChar = '*';
             this.passwordTextBox.Size = new System.Drawing.Size(199, 22);
@@ -108,7 +108,7 @@
             // mobileNoTextBox
             // 
             this.mobileNoTextBox.Location = new System.Drawing.Point(133, 144);
-            this.mobileNoTextBox.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.mobileNoTextBox.Margin = new System.Windows.Forms.Padding(4);
             this.mobileNoTextBox.Name = "mobileNoTextBox";
             this.mobileNoTextBox.Size = new System.Drawing.Size(199, 22);
             this.mobileNoTextBox.TabIndex = 7;
@@ -116,7 +116,7 @@
             // registerButton
             // 
             this.registerButton.Location = new System.Drawing.Point(133, 181);
-            this.registerButton.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.registerButton.Margin = new System.Windows.Forms.Padding(4);
             this.registerButton.Name = "registerButton";
             this.registerButton.Size = new System.Drawing.Size(100, 28);
             this.registerButton.TabIndex = 8;
@@ -151,7 +151,7 @@
             this.Controls.Add(this.passwordLabel);
             this.Controls.Add(this.emailLabel);
             this.Controls.Add(this.userNameLabel);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "RegisterForm";
             this.Text = "RegisterForm";
             this.ResumeLayout(false);
