@@ -28,8 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.labelSenderID = new System.Windows.Forms.Label();
-            this.textBoxSenderID = new System.Windows.Forms.TextBox();
             this.labelSenderAddress = new System.Windows.Forms.Label();
             this.textBoxSenderAddress = new System.Windows.Forms.TextBox();
             this.labelSourceCity = new System.Windows.Forms.Label();
@@ -44,20 +42,6 @@
             this.textBoxDestinationCity = new System.Windows.Forms.TextBox();
             this.buttonSubmit = new System.Windows.Forms.Button();
             this.SuspendLayout();
-
-            // labelSenderID
-            this.labelSenderID.AutoSize = true;
-            this.labelSenderID.Location = new System.Drawing.Point(13, 13);
-            this.labelSenderID.Name = "labelSenderID";
-            this.labelSenderID.Size = new System.Drawing.Size(59, 13);
-            this.labelSenderID.TabIndex = 0;
-            this.labelSenderID.Text = "Sender ID:";
-
-            // textBoxSenderID
-            this.textBoxSenderID.Location = new System.Drawing.Point(122, 10);
-            this.textBoxSenderID.Name = "textBoxSenderID";
-            this.textBoxSenderID.Size = new System.Drawing.Size(200, 20);
-            this.textBoxSenderID.TabIndex = 1;
 
             // labelSenderAddress
             this.labelSenderAddress.AutoSize = true;
@@ -167,16 +151,12 @@
             this.Controls.Add(this.labelSourceCity);
             this.Controls.Add(this.textBoxSenderAddress);
             this.Controls.Add(this.labelSenderAddress);
-            this.Controls.Add(this.textBoxSenderID);
-            this.Controls.Add(this.labelSenderID);
             this.Name = "CourierRequestForm";
             this.Text = "Courier Request Form";
             this.ResumeLayout(false);
             this.PerformLayout();
         }
 
-        private System.Windows.Forms.Label labelSenderID;
-        private System.Windows.Forms.TextBox textBoxSenderID;
         private System.Windows.Forms.Label labelSenderAddress;
         private System.Windows.Forms.TextBox textBoxSenderAddress;
         private System.Windows.Forms.Label labelSourceCity;

@@ -56,7 +56,7 @@ namespace CourierManagementSystem
         {
             SqlConnection con = new SqlConnection();
             con.ConnectionString = ConfigurationManager.ConnectionStrings["dbconnection"].ConnectionString;
-            string query = "SELECT user_id, password FROM [User] WHERE email= (@email)";
+            string query = "SELECT user_id, password, user_name FROM [User] WHERE email= (@email)";
             UserInfo user = new UserInfo();
             try
             {
@@ -75,11 +75,13 @@ namespace CourierManagementSystem
                             {
                                 int uid = reader.GetInt32(0);
                                 string pass = reader.GetString(1);
+                                string user_name = reader.GetString(2);
 
                                 if (pass == password && email == "admin@gmail.com")
                                 {
                                     user.message = "Admin Login";
                                     user.UserID = uid.ToString();
+                                    user.UserName = user_name.ToString();
                                    // Session["uid"] = uid;
                                     //Response.Redirect("Home_Teacher.aspx");
                                 }
@@ -87,6 +89,7 @@ namespace CourierManagementSystem
                                 {
                                     user.message = "Login Successful";
                                     user.UserID = uid.ToString();
+                                    user.UserName = user_name.ToString();
                                 }
                                 else
                                 {

@@ -26,6 +26,9 @@ namespace Client.UserServiceReference {
         private string UserIDField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string UserNameField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
         private string messageField;
         
         [global::System.ComponentModel.BrowsableAttribute(false)]
@@ -47,6 +50,19 @@ namespace Client.UserServiceReference {
                 if ((object.ReferenceEquals(this.UserIDField, value) != true)) {
                     this.UserIDField = value;
                     this.RaisePropertyChanged("UserID");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string UserName {
+            get {
+                return this.UserNameField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.UserNameField, value) != true)) {
+                    this.UserNameField = value;
+                    this.RaisePropertyChanged("UserName");
                 }
             }
         }
