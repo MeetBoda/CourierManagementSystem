@@ -16,6 +16,7 @@ namespace Client
     public static class LoginInfo
     {
         public static int UserID;
+        public static string UserName;
     }
 
     public partial class LoginForm : Form
@@ -40,6 +41,7 @@ namespace Client
             if(userinfo.message == "Admin Login")
             {
                 LoginInfo.UserID = Convert.ToInt32(userinfo.UserID);
+                LoginInfo.UserName = userinfo.UserName;
                 AdminHomeScreenForm adminHomeScreenForm = new AdminHomeScreenForm();
                 adminHomeScreenForm.ShowDialog();
                 Close();
@@ -47,7 +49,8 @@ namespace Client
             else if(userinfo.message == "Login Successful")
             {
                 LoginInfo.UserID = Convert.ToInt32(userinfo.UserID);
-                MessageBox.Show(userinfo.message);
+                LoginInfo.UserName = userinfo.UserName;
+                //MessageBox.Show(userinfo.message);
                 HomeScreenForm homeScreenForm = new HomeScreenForm();
                 homeScreenForm.ShowDialog();
                 Close();
