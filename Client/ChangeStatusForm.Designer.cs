@@ -55,7 +55,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(224, 86);
+            this.ClientSize = new System.Drawing.Size(228, 93);
             this.Controls.Add(this.btnSubmit);
             this.Controls.Add(this.comboBoxStatus);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;

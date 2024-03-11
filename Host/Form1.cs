@@ -16,7 +16,7 @@ namespace Host
 {
     public partial class Form1 : Form
     {
-        ServiceHost sh = null;
+        //ServiceHost sh = null;
         public Form1()
         {
             InitializeComponent();
@@ -24,21 +24,15 @@ namespace Host
 
         private void Form1_Load(object sender, EventArgs e)
         {
-            Uri tcpa = new Uri("net.tcp://localhost:8010/Design_Time_Addresses/CourierManagementSystem/");
-            sh = new ServiceHost(typeof(Service1), tcpa);
-            sh.Open();
+            ServiceHost sh1 = new ServiceHost(typeof(CourierManagementSystem.UserService));
+            ServiceHost sh2 = new ServiceHost(typeof(CourierManagementSystem.AdminService));
+            ServiceHost sh3 = new ServiceHost(typeof(CourierManagementSystem.CourierService));
+            ServiceHost sh4 = new ServiceHost(typeof(CourierManagementSystem.ProfileService));
+            sh1.Open();
+            sh2.Open();
+            sh3.Open();
+            sh4.Open();
             label1.Text = "Service Running ...";
-
-
-            //Uri http = new Uri("http://localhost:8733/Design_Time_Addresses/CourierManagementSystem/");
-            //NetTcpBinding tcpb = new NetTcpBinding();
-
-            /*ServiceMetadataBehavior mBehave = new ServiceMetadataBehavior();
-            sh.Description.Behaviors.Add(mBehave);
-            sh.AddServiceEndpoint(typeof(IMetadataExchange), MetadataExchangeBindings.CreateMexTcpBinding(), "mex");
-            sh.AddServiceEndpoint(typeof(IService1), tcpb, tcpa);*/
-
-
         }
     }
 }

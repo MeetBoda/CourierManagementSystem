@@ -46,15 +46,13 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="AdminService.cs" />
-    <Compile Include="CourierClass.cs" />
+    <Compile Include="CourierService.cs" />
     <Compile Include="IAdminService.cs" />
     <Compile Include="ICourierService.cs" />
     <Compile Include="IProfileService.cs" />
-    <Compile Include="IService1.cs" />
     <Compile Include="IUserService.cs" />
     <Compile Include="ProfileService.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Service1.cs" />
     <Compile Include="UserService.cs" />
   </ItemGroup>
   <ItemGroup>

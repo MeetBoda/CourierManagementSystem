@@ -43,7 +43,11 @@ namespace Client
 
         private void AdminHomeScreenForm_Load(object sender, EventArgs e)
         {
-
+            foreach (DataGridViewColumn column in dataGridView1.Columns)
+            {
+                column.HeaderCell.Value = column.HeaderText;
+            }
+            dataGridView1.ColumnHeadersVisible = true;
         }
 
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)

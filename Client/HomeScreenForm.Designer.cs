@@ -72,7 +72,7 @@ namespace Client
             this.cancelRequestButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(76)))), ((int)(((byte)(60)))));
             this.cancelRequestButton.Font = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cancelRequestButton.ForeColor = System.Drawing.Color.White;
-            this.cancelRequestButton.Location = new System.Drawing.Point(563, 15);
+            this.cancelRequestButton.Location = new System.Drawing.Point(548, 15);
             this.cancelRequestButton.Margin = new System.Windows.Forms.Padding(4);
             this.cancelRequestButton.Name = "cancelRequestButton";
             this.cancelRequestButton.Size = new System.Drawing.Size(237, 43);
@@ -83,26 +83,31 @@ namespace Client
             // 
             // label1
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(810, 23);
+            this.label1.BackColor = System.Drawing.Color.White;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F);
+            this.label1.ForeColor = System.Drawing.SystemColors.MenuText;
+            this.label1.ImageAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.label1.Location = new System.Drawing.Point(1752, 17);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(57, 25);
+            this.label1.Size = new System.Drawing.Size(133, 41);
             this.label1.TabIndex = 3;
-            this.label1.Text = "Hello " + LoginInfo.UserName;
-
+            this.label1.Text = "👋 Meet";
+            this.label1.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
             // logoutButton
             // 
             this.logoutButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(211)))), ((int)(((byte)(84)))), ((int)(((byte)(0)))));
             this.logoutButton.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.logoutButton.ForeColor = System.Drawing.Color.White;
-            this.logoutButton.Location = new System.Drawing.Point(1160, 15);
-            this.logoutButton.Margin = new System.Windows.Forms.Padding(4);
+            this.logoutButton.ImageAlign = System.Drawing.ContentAlignment.TopRight;
+            this.logoutButton.Location = new System.Drawing.Point(1905, 15);
+            this.logoutButton.Margin = new System.Windows.Forms.Padding(1, 4, 4, 4);
             this.logoutButton.Name = "logoutButton";
+            this.logoutButton.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.logoutButton.Size = new System.Drawing.Size(125, 43);
             this.logoutButton.TabIndex = 4;
             this.logoutButton.Text = "Logout";
+            this.logoutButton.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             this.logoutButton.UseVisualStyleBackColor = false;
             this.logoutButton.Click += new System.EventHandler(this.logoutButton_Click);
             // 
@@ -112,12 +117,12 @@ namespace Client
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(1298, 716);
-            this.Controls.Add(this.label1);
+            this.ClientSize = new System.Drawing.Size(1507, 713);
             this.Controls.Add(this.cancelRequestButton);
             this.Controls.Add(this.viewProfileButton);
             this.Controls.Add(this.placeRequestButton);
             this.Controls.Add(this.logoutButton);
+            this.Controls.Add(this.label1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Margin = new System.Windows.Forms.Padding(4);
             this.MaximizeBox = false;
@@ -127,8 +132,6 @@ namespace Client
             this.Text = "Home Screen";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.ResumeLayout(false);
-            this.PerformLayout();
-
 
         }
 /*

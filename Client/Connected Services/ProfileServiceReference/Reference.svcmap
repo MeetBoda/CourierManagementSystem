@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ReferenceGroup xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" ID="4db79810-1c32-4c92-8bc1-b4bd3e6740ff" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+<ReferenceGroup xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" ID="711ecb82-df3c-4cc3-99b1-a1dad40a37d6" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
   <ClientOptions>
     <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
     <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
@@ -19,13 +19,14 @@
     <ServiceContractMappings />
   </ClientOptions>
   <MetadataSources>
-    <MetadataSource Address="http://localhost:8733/Design_Time_Addresses/CourierManagementSystem/ProfileService/mex" Protocol="mex" SourceId="1" />
+    <MetadataSource Address="http://localhost:8733/Design_Time_Addresses/CourierManagementSystem/ProfileService/mex/" Protocol="http" SourceId="1" />
   </MetadataSources>
   <Metadata>
-    <MetadataFile FileName="service.wsdl" MetadataType="Wsdl" ID="edc58148-bda0-4e6b-bce7-cf505b60424b" SourceId="1" SourceUrl="http://localhost:8733/Design_Time_Addresses/CourierManagementSystem/ProfileService/mex" />
-    <MetadataFile FileName="service.xsd" MetadataType="Schema" ID="85ff611f-49d6-4ec9-a197-d7349ad517a0" SourceId="1" SourceUrl="http://localhost:8733/Design_Time_Addresses/CourierManagementSystem/ProfileService/mex" />
-    <MetadataFile FileName="service1.xsd" MetadataType="Schema" ID="83bff943-c24c-45e4-8797-a504186dba44" SourceId="1" SourceUrl="http://localhost:8733/Design_Time_Addresses/CourierManagementSystem/ProfileService/mex" />
-    <MetadataFile FileName="CourierManagementSystem.xsd" MetadataType="Schema" ID="b91047cd-9f59-4d68-beca-58dd7a973bd0" SourceId="1" SourceUrl="http://localhost:8733/Design_Time_Addresses/CourierManagementSystem/ProfileService/mex" />
+    <MetadataFile FileName="item.xsd" MetadataType="Schema" ID="aedef9ac-b4f6-4d92-aba8-b6cc131e229d" SourceId="1" SourceUrl="http://localhost:8733/Design_Time_Addresses/CourierManagementSystem/ProfileService/mex/?xsd=xsd2" />
+    <MetadataFile FileName="ProfileService.wsdl" MetadataType="Wsdl" ID="247aeddf-8791-4586-935f-29c321d9dde5" SourceId="1" SourceUrl="http://localhost:8733/Design_Time_Addresses/CourierManagementSystem/ProfileService/mex/?wsdl" />
+    <MetadataFile FileName="item1.xsd" MetadataType="Schema" ID="f7924d13-7095-4eaf-a798-ae9608069ced" SourceId="1" SourceUrl="http://localhost:8733/Design_Time_Addresses/CourierManagementSystem/ProfileService/mex/?xsd=xsd1" />
+    <MetadataFile FileName="item2.xsd" MetadataType="Schema" ID="3cf78889-cbc2-427e-98b8-78ca6668be92" SourceId="1" SourceUrl="http://localhost:8733/Design_Time_Addresses/CourierManagementSystem/ProfileService/mex/?xsd=xsd0" />
+    <MetadataFile FileName="item.disco" MetadataType="Disco" ID="03760878-2782-4afc-9ace-8a528fee29dc" SourceId="1" SourceUrl="http://localhost:8733/Design_Time_Addresses/CourierManagementSystem/ProfileService/mex/?disco" />
   </Metadata>
   <Extensions>
     <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />

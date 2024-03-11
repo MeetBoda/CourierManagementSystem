@@ -159,55 +159,56 @@
     <EmbeddedResource Include="RegisterForm.resx">
       <DependentUpon>RegisterForm.cs</DependentUpon>
     </EmbeddedResource>
-    <None Include="Connected Services\AdminServiceReference\Arrays.xsd">
-      <SubType>Designer</SubType>
-    </None>
+    <None Include="app.config" />
+    <None Include="Connected Services\AdminServiceReference\AdminService.wsdl" />
     <None Include="Connected Services\AdminServiceReference\Client.AdminServiceReference.AdminData.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
-    <None Include="Connected Services\AdminServiceReference\CourierManagementSystem.xsd">
+    <None Include="Connected Services\AdminServiceReference\item.xsd">
       <SubType>Designer</SubType>
     </None>
-    <None Include="Connected Services\AdminServiceReference\service.wsdl" />
-    <None Include="Connected Services\AdminServiceReference\service.xsd">
+    <None Include="Connected Services\AdminServiceReference\item1.xsd">
       <SubType>Designer</SubType>
     </None>
-    <None Include="Connected Services\AdminServiceReference\service1.xsd">
+    <None Include="Connected Services\AdminServiceReference\item2.xsd">
       <SubType>Designer</SubType>
     </None>
-    <None Include="Connected Services\CourierServiceReference\service.wsdl" />
-    <None Include="Connected Services\CourierServiceReference\service.xsd">
+    <None Include="Connected Services\AdminServiceReference\item3.xsd">
       <SubType>Designer</SubType>
     </None>
-    <None Include="Connected Services\CourierServiceReference\service1.xsd">
+    <None Include="Connected Services\CourierServiceReference\CourierService.wsdl" />
+    <None Include="Connected Services\CourierServiceReference\item.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\CourierServiceReference\item1.xsd">
       <SubType>Designer</SubType>
     </None>
     <None Include="Connected Services\ProfileServiceReference\Client.ProfileServiceReference.Profile.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
-    <None Include="Connected Services\ProfileServiceReference\CourierManagementSystem.xsd">
+    <None Include="Connected Services\ProfileServiceReference\item.xsd">
       <SubType>Designer</SubType>
     </None>
-    <None Include="Connected Services\ProfileServiceReference\service.wsdl" />
-    <None Include="Connected Services\ProfileServiceReference\service.xsd">
+    <None Include="Connected Services\ProfileServiceReference\item1.xsd">
       <SubType>Designer</SubType>
     </None>
-    <None Include="Connected Services\ProfileServiceReference\service1.xsd">
+    <None Include="Connected Services\ProfileServiceReference\item2.xsd">
       <SubType>Designer</SubType>
     </None>
+    <None Include="Connected Services\ProfileServiceReference\ProfileService.wsdl" />
     <None Include="Connected Services\UserServiceReference\Client.UserServiceReference.UserInfo.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
-    <None Include="Connected Services\UserServiceReference\CourierManagementSystem.xsd">
+    <None Include="Connected Services\UserServiceReference\item.xsd">
       <SubType>Designer</SubType>
     </None>
-    <None Include="Connected Services\UserServiceReference\service.wsdl" />
-    <None Include="Connected Services\UserServiceReference\service.xsd">
+    <None Include="Connected Services\UserServiceReference\item1.xsd">
       <SubType>Designer</SubType>
     </None>
-    <None Include="Connected Services\UserServiceReference\service1.xsd">
+    <None Include="Connected Services\UserServiceReference\item2.xsd">
       <SubType>Designer</SubType>
     </None>
+    <None Include="Connected Services\UserServiceReference\UserService.wsdl" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -219,16 +220,34 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <None Include="App.config" />
+    <WCFMetadata Include="Connected Services\" />
   </ItemGroup>
   <ItemGroup>
-    <WCFMetadata Include="Connected Services\" />
+    <None Include="Resources\Courier.jpg" />
   </ItemGroup>
   <ItemGroup>
     <WCFMetadataStorage Include="Connected Services\AdminServiceReference\" />
     <WCFMetadataStorage Include="Connected Services\CourierServiceReference\" />
     <WCFMetadataStorage Include="Connected Services\ProfileServiceReference\" />
     <WCFMetadataStorage Include="Connected Services\UserServiceReference\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Connected Services\UserServiceReference\item.disco" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Connected Services\UserServiceReference\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Connected Services\UserServiceReference\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Connected Services\UserServiceReference\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Connected Services\ProfileServiceReference\item.disco" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Connected Services\ProfileServiceReference\configuration91.svcinfo" />
@@ -243,19 +262,7 @@
     </None>
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\Courier.jpg" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Connected Services\CourierServiceReference\configuration91.svcinfo" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Connected Services\CourierServiceReference\configuration.svcinfo" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Connected Services\CourierServiceReference\Reference.svcmap">
-      <Generator>WCF Proxy Generator</Generator>
-      <LastGenOutput>Reference.cs</LastGenOutput>
-    </None>
+    <None Include="Connected Services\AdminServiceReference\item.disco" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Connected Services\AdminServiceReference\configuration91.svcinfo" />
@@ -270,13 +277,16 @@
     </None>
   </ItemGroup>
   <ItemGroup>
-    <None Include="Connected Services\UserServiceReference\configuration91.svcinfo" />
+    <None Include="Connected Services\CourierServiceReference\item.disco" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Connected Services\UserServiceReference\configuration.svcinfo" />
+    <None Include="Connected Services\CourierServiceReference\configuration91.svcinfo" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Connected Services\UserServiceReference\Reference.svcmap">
+    <None Include="Connected Services\CourierServiceReference\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Connected Services\CourierServiceReference\Reference.svcmap">
       <Generator>WCF Proxy Generator</Generator>
       <LastGenOutput>Reference.cs</LastGenOutput>
     </None>

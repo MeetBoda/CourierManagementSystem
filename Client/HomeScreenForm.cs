@@ -15,6 +15,7 @@ namespace Client
         public HomeScreenForm()
         {
             InitializeComponent();
+            label1.Text = "👋 " + LoginInfo.UserName;
         }
 
         private void HomeScreenForm_Load(object sender, EventArgs e)

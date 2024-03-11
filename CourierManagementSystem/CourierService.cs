@@ -8,9 +8,9 @@ using System.Threading.Tasks;
 
 namespace CourierManagementSystem
 {
-    public class CourierClass : ICourierService
+    public class CourierService : ICourierService
     {
-        public CourierClass() { }
+        public CourierService() { }
 
         public int placerequest(int sender_id, string sender_address, string src_city, string receiver_name, string receiver_address, string receiver_mobile, string dest_city)
         {
@@ -52,7 +52,7 @@ namespace CourierManagementSystem
             SqlConnection con = new SqlConnection();
             con.ConnectionString = ConfigurationManager.ConnectionStrings["dbconnection"].ConnectionString;
 
-            string query = "SELECT * FROM [Courier] WHERE courier_id = (@courier_id) AND sender_id = (@sender_id)";
+            string query = "SELECT * FROM [Courier] WHERE courier_id = (@courier_id) AND sender_id = (@sender_id) AND status = (@status)";
             //query = "DELETE FROM [Courier] WHERE courier_id = (@courier_id)";
             try
             {
@@ -62,6 +62,7 @@ namespace CourierManagementSystem
                     {
                         cmd.Parameters.AddWithValue("@courier_id", courier_id);
                         cmd.Parameters.AddWithValue("@sender_id", user_id);
+                        cmd.Parameters.AddWithValue("@status", "Order Placed");
                         cmd.Connection = con;
                         con.Open();
                         SqlDataReader reader = cmd.ExecuteReader();
